@@ -1,0 +1,106 @@
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1.25rem 5rem;
+
+  background-color: var(--neutral-color-200);
+
+  > nav {
+    ul {
+      display: flex;
+      gap: 3rem;
+      width: fit-content;
+
+      li {
+          ::before,
+          ::after {
+            content: "";
+            position: absolute;
+            display: block;
+            border: 0px solid transparent;
+            width: 0%;
+            height: 0%;
+            transition: all 0.4s ease;
+          }
+
+          ::after {
+            top: 0;
+            right: 0;
+            border-top: 2px solid transparent;
+            border-right: 2px solid transparent;
+          }
+          
+          ::before {
+            left: 0;
+            bottom: 0;
+            border-bottom: 2px solid transparent;
+            border-left: 2px solid transparent;
+          }
+          
+          :hover::before,
+          :hover::after {
+            width: 10px;
+            height: 10px;
+            border-color: var(--primary-color);
+          }
+
+        a {
+          font-size: 1rem;
+          color: var(--neutral-color-900);
+          padding: 8px;
+          position: relative;
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  .social {
+    display: flex;
+    gap: 0.5rem;
+  }
+}
+
+.link-71 {
+  color: #ffffff;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  position: relative;
+  display: inline-block;
+}
+
+.link-71::before,
+.link-71::after {
+  content: "";
+  position: absolute;
+  display: block;
+  border: 0px solid transparent;
+  width: 0%;
+  height: 0%;
+  transition: all 0.3s ease;
+}
+
+.link-71::after {
+  top: 0;
+  left: 0;
+  border-top: 2px solid transparent;
+  border-left: 2px solid transparent;
+}
+
+.link-71::before {
+  right: 0;
+  bottom: 0;
+  border-bottom: 2px solid transparent;
+  border-right: 2px solid transparent;
+}
+
+.link-71:hover::before,
+.link-71:hover::after {
+  width: 10px;
+  height: 10px;
+  border-color: #fff;
+}
